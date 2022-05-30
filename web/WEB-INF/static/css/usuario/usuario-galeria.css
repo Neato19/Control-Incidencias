@@ -1,0 +1,62 @@
+*, *:before, *::after {
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-size: 2.5vh;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+#galeria {
+    gap: 2rem;
+    min-height: 550px;
+    
+    padding: 2rem;  
+    
+    background: #212534;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#galeria > div {
+    background-color: #191c29;
+    border-radius: 20px;
+    color: white;
+}
+
+#galeria * {
+    padding: 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a > p {
+    text-align: justify;
+    color: white;
+}
+
+#ficha > a > img {
+    height: 200px;
+    width: 180px;
+    
+    margin: 0;
+    padding: 0;
+    
+    border-radius: 20px;
+    object-fit: cover;
+}

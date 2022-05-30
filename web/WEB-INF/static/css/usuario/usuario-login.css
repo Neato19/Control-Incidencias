@@ -1,0 +1,142 @@
+*, *:before, *::after {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-size: 2.5vh;
+}
+
+body {
+    font-family: sans-serif;
+    background: #212534;
+}
+
+#container {
+    height: calc(100vh - 10rem);
+    /*height: 100vh;*/
+    gap: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: monospace;
+
+    width: 10rem;
+    padding: 1rem;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+    background-color: white;
+}
+
+form {
+    max-width: 1140px;
+    max-height: 640px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    padding: 2rem;
+
+    background: #191c29;
+    border-radius: 2rem;
+    color: white;
+
+}
+
+form::before {
+    content: "";
+    width: 100.20%;
+    height: 101%;
+    border-radius: 2rem;
+    background-image: linear-gradient(
+        #ff0000,
+        #fffb00,
+        #2bff00,
+        #00f7ff,
+        #0011ff,
+        #ff00dd
+        );
+    position: absolute;
+    z-index: -1;
+    top: -0.50%;
+    left: -0.10%;
+}
+
+form::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 105%;
+    width: 102%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(217px / 6));
+    background-image: linear-gradient(
+        #ff0000,
+        #fffb00,
+        #2bff00,
+        #00f7ff,
+        #0011ff,
+        #ff00dd
+        );
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+form > * {
+    margin: 10px;
+}
+
+
+.buttonset > input {
+    height: 2rem;
+    width: 12rem;
+    
+    margin: 5px;
+    
+    font-size: 0.750rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    transition: transform 150ms ease;
+    color: white;
+}
+
+.buttonset > input:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.buttonset > input:active {
+    transform: scale(1.015);
+    cursor: pointer;
+}
+
+#enviar {
+    background: #44D62C
+}
+
+#restaurar {
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+    background: transparent;
+}
+
+.fieldset {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
